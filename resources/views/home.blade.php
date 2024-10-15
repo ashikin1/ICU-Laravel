@@ -1,15 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.main')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ config('app.name') }}</title>
-</head>
+@section('title', 'Home')
 
-<body>
-    <h1>Hello, {{ $name ?? "yorn" }}</h1>
-</body>
+@section('content')
 
-</html>
+@php($_name = $name ?? "team")
+
+    @if ($_name == "siti")
+    <p>You are banned</p>
+
+    @elseif ($_name == "nur")
+    <h1>you are girl</h1>
+
+    @else
+    <h1>Hello, {{ $_name }}</h1>
+    @endif
+
+    <button type="button" class="btn btn-outline-primary">Click Me</button>
+@endsection

@@ -9,7 +9,7 @@ Route::get('/', function () {
 
 Route::get('/home', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/auth/signin', function () {
     return view('auth.signin');
@@ -29,6 +29,10 @@ Route::get('/people/profile', function () {
 Route::get('/user/{name}', function ($name) {
     return 'user '.$name;
 });
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
 
 
 //alias of a route user.profile =/pengguna/profile
