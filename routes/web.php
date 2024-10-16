@@ -35,6 +35,7 @@ Route::get('/about', function () {
 })->name('about');
 
 
+
 //alias of a route user.profile =/pengguna/profile
 
 //Redirect route to named route
@@ -67,3 +68,5 @@ Route::name('job')->prefix('job')->group(function () {
     })->name('.description');
     
 });
+
+require __DIR__.'/feed/web.php';
