@@ -4,9 +4,7 @@
 
 @section('content')
 
-    <h1>Feed Create</h1>
-
-    <div class="container">
+<div class="container">
 
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -17,8 +15,10 @@
                 </li>                   
                 @endforeach
             </ul>
-        @endif
         </div>
+        @endif
+
+        <h1>Feed Create</h1>
         <form action="{{ route('feed.store') }}" method="POST">
             @csrf
 
